@@ -11,7 +11,7 @@
 | first_name         | string | null: false               |
 | last_name_kana     | string | null: false               |
 | first_name_kana    | string | null: false               |
-| birth_date         | string | null: false               |
+| birth_date         | date   | null: false               |
 
 ### Association
 - has_many :items
@@ -30,7 +30,7 @@
 | shipping_charge_id | integer    | null: false                    |
 | prefecture_id      | integer    | null: false                    |
 | shipping_date_id   | integer    | null: false                    |
-| price              | date       | null: false                    |
+| price              | integer    | null: false                    |
 
 ### Association
 - belongs_to :user
