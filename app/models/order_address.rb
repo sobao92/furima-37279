@@ -1,6 +1,6 @@
 class OrderAddress
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :block, :building, :phone_number
+  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :block, :building, :phone_number, :token
 
   with_options presence: true do
     validates :user_id, :item_id
@@ -9,6 +9,7 @@ class OrderAddress
     validates :city, :block
     validates :phone_number, numericality: { only_integer: true, allow_blank: true },
                              length: { minimum: 10, maximum: 11, allow_blank: true }
+    validates :token
   end
 
   def save
